@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import useStore from '../store/store';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import FoodInventory from './Inventory/FoodInventory';
@@ -13,15 +14,19 @@ import OnboardingGuide from './components/OnboardingGuide'; // Import the Onboar
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track user login status
-  const [inventory, setInventory] = useState([]); // Store inventory items
+  // const [inventory, setInventory] = useState([]); // Store inventory items
+  const {inventory, loadInventoryFromStorage} = useStore();
   const [runTutorial, setRunTutorial] = useState(false); // Control the onboarding guide
 
   // Read inventory from localStorage when the component mounts
   useEffect(() => {
+    /*
     const storedInventory = localStorage.getItem('inventory');
     if (storedInventory) {
       setInventory(JSON.parse(storedInventory));
     }
+    */
+    loadInventoryFromStorage();
   }, []);
 
   const handleLogin = () => {

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // 导入 Link 组件
 import axios from 'axios';
 import RecipeGrid from './RecipeGrid';
-import  useStore  from '../store/store';
+import useStore from '../store/store';
 import data from "./egg_tomato_onion.json";
 import './MealPlan.css';
 import MealPlanImage0 from '../images/MealPlanImage.png';
