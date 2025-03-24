@@ -1,0 +1,48 @@
+.add-shopping-list-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 16px;
+}
+
+.quantity-input-box {
+  display: flex;
+  align-items: center;
+}
+
+.item-name-input {
+  width: 150px;
+}
+
+
+.item-name-input,
+.quantity-input,
+.unit-select {
+  margin: 0 4px;
+}
+
+.quantity-input {
+  width: 100px;
+  margin-right: 8px;
+}
+
+.add-item-button {
+  height: 40px;
+}
+
+.add-shopping-list-form .MuiOutlinedInput-root {
+  border-color: #8c6bae;
+}
+
+.add-shopping-list-form .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #8c6bae;
+}
+
+.add-shopping-list-form .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #8c6bae;
+}
+
+.add-shopping-list-form .MuiInputBase-root {
+  height: 40px;
+}

@@ -1,0 +1,14 @@
+.knowledge-hub-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Adjust the space between sections */
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .knowledge-hub-page > * {
+    width: 100%;
+    max-width: 1200px; /* Limit the width of content */
+  }
+  

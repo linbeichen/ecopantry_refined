@@ -1,0 +1,30 @@
+/* CreateNewListButton.css */
+.shoppinglist-page-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.table-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.table-list-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.query-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-new-item-button {
+  z-index: 1000;
+}

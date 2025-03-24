@@ -1,0 +1,147 @@
+.features-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features-title {
+    font-size: 34px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.5s ease-out;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0px;
+    grid-column-gap: 42px;
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    animation: fadeIn 0.7s ease-out;
+    border-radius: 0px;
+}
+
+.feature-card:nth-child(2),
+.feature-card:nth-child(3) {
+    background-color: #f7ebff;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: left;
+}
+
+.feature-icon {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+    max-width: 180px;
+}
+
+.feature-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.feature-card:hover h3 {
+    color: #8c6bae;
+}
+
+.feature-card p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 10px;
+    background-color: #8c6bae;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: #3e0073;
+    transform: scale(1.05);
+}
+
+.step-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4b0082;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}

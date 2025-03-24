@@ -1,0 +1,115 @@
+/* src/components/NotificationBell.css */
+
+/* 通知铃铛的样式 */
+.notification-bell {
+    margin-left: 20px;
+}
+
+.notification-bell .MuiIconButton-root {
+    color: white;
+}
+
+/* 通知消息的样式 */
+.notification-message {
+    padding: 10px;
+    background-color: #f0f8ff; /* 淡蓝色背景 */
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 通知部分的样式 */
+.notification-section {
+    margin-bottom: 15px;
+}
+
+.notification-section h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 通知表格的样式 */
+.notification-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notification-table tr {
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+    background-color: #f0f8ff; /* 未查看时的淡蓝色背景 */
+}
+
+.notification-table tr.viewed {
+    background-color: white; /* 查看过后的白色背景 */
+}
+
+.notification-table tr:hover {
+    background-color: #e6f2ff; /* 悬停时稍微深一点的淡蓝色 */
+}
+
+.notification-table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+.notification-table td:first-child {
+    width: 80%;
+    word-break: break-word;
+}
+
+.notification-table td:last-child {
+    width: 20%;
+    text-align: right;
+}
+
+/* 关闭按钮的样式 */
+.dismiss-button {
+    color: white;
+}
+
+.dismiss-button:hover {
+    color: #f00;
+}
+
+/* 已过期通知的特殊样式 */
+.notification-section.expired-section h4 {
+    color: red;
+}
+
+.notification-section.expired-section .notification-item {
+    background-color: #ffe6e6; /* 浅红色背景 */
+}
+
+.notification-section.expired-section .notification-item:hover {
+    background-color: #ffcccc; /* 悬停时更深的红色 */
+}
+
+/* 调整菜单的样式，确保背景为白色，并有适当的阴影 */
+.MuiPaper-root {
+    background-color: white !important; /* 白色背景 */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1) !important; /* 添加阴影 */
+    border-radius: 8px !important; /* 圆角 */
+}
+
+/* 移除透明背景设置 */
+.MuiMenu-paper {
+    background-color: white !important; /* 确保背景为白色 */
+    border-radius: 8px; /* 圆角 */
+}
+
+/* 移除默认的列表样式 */
+.MuiList-root {
+    padding: 0;
+}
+
+.notification-submessage {
+    color: black; /* 紫色字体 */
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}

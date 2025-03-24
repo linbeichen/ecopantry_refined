@@ -1,0 +1,48 @@
+.progress-charts-container {
+  display: flex; /* 设置为flex布局 */
+  justify-content: space-between; /* 左右分布 */
+  align-items: flex-start; /* 顶部对齐 */
+  gap: 20px; /* 控制图表组和描述框之间的距离 */
+  padding: 20px;
+  background-color: #ffffff; /* 设置整体背景颜色为白色 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  margin-top: 40px; /* 设置上方外边距，控制组件与上一个模块的距离 */
+}
+
+.charts-group {
+  display: flex;
+  flex-direction: column; /* 设置图表组为纵向排列 */
+  gap: 20px; /* 设置折线图和面积图之间的距离 */
+  width: 75%; /* 设置图表区域宽度 */
+}
+
+.line-chart {
+  width: 100%; /* 折线图宽度100% */
+}
+
+.area-charts {
+  display: flex;
+  justify-content: space-between; /* 设置两个面积图左右分布 */
+  gap: 20px; /* 设置两个面积图之间的间距 */
+}
+
+.area-chart {
+  width: 48%; /* 设置每个面积图的宽度 */
+}
+
+.description-box {
+  width: 25%; /* 设置描述框宽度 */
+  background-color: #f9f5ff; /* 设置背景为淡紫色 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.description-box h3 {
+  color: #663399; /* 标题文字使用亮紫色 */
+}
+
+.description-box p {
+  color: #555555; /* 描述文字使用深灰色 */
+}

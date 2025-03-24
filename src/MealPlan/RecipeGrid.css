@@ -1,0 +1,9 @@
+.RecipeGridContainer {
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+    width: 85%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin:0 auto;
+}

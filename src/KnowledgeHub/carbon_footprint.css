@@ -1,0 +1,125 @@
+/* Main container styling */
+.carbon-footprint {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Info Icon Styling */
+.info-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #6c63ff;
+}
+
+/* Styling for average carbon footprint section */
+.average-footprint {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #e8f0fe;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Info Message Styling */
+.info-message {
+  text-align: center;
+  font-size: 1rem;
+  background-color: #eaf7f4;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Calculator container styling */
+.calculator-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.input-container select,
+.input-container button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.input-container button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #4e48cc;
+}
+
+/* Result container styling */
+.result-container {
+  text-align: center;
+  background-color: #eaf7f4;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Gauge Chart Container */
+.gauge-chart-container {
+  margin-top: 20px;
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c63ff;
+  margin-top: 20px;
+}
+
+.loading-spinner p {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.footprint-value {
+  margin-top: 0px; /* Reduce margin to move it closer to the meter */
+  font-size: 3rem; 
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

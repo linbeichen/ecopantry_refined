@@ -1,0 +1,131 @@
+.call-to-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    overflow: hidden; /* 确保溢出内容被隐藏 */
+    animation: slideIn 1s ease-out; /* 整体滑入动画 */
+}
+
+.cta-content {
+    max-width: 50%;
+    animation: fadeInUp 1.5s ease-out; /* 内容淡入向上动画 */
+}
+
+.cta-content h2 {
+    font-size: 34px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: zoomIn 1s ease-out; /* 标题放大动画 */
+}
+
+.cta-content p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out; /* 段落淡入动画 */
+}
+
+.cta-button {
+    background-color: #9370DB;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* 添加放大效果 */
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    animation: float 3s ease-in-out infinite; /* 按钮浮动动画 */
+    text-decoration: none; /* 移除下划线 */
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #7a57c1;
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+
+.cta-image {
+    position: relative;
+    max-width: 50%;
+    animation: slideInRight 1.5s ease-out; /* 图片从右侧滑入动画 */
+}
+
+.cta-image img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s ease; /* 图片悬停效果 */
+}
+
+.cta-image img:hover {
+    transform: scale(1.05); /* 图片悬停时放大 */
+}
+
+/* 动画效果 */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

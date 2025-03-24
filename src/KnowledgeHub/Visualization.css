@@ -1,0 +1,42 @@
+.visualization-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+ 
+.header {
+    background-color: #8c6bae;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+ 
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+ 
+/* Scrollable chart container with a fixed visible width */
+.scrollable-chart-container {
+    width: 900px; /* Fixed width to show only 5 bars at a time */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    margin: 0 auto;
+}
+ 
+/* Chart container with dynamic width to account for the total number of councils */
+.chart-container {
+    width: calc(50px * 50); /* Total width based on the number of councils */
+    height: 400px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+canvas {
+    width: 100%; /* Fill the available width for the canvas */
+    height: 100%;
+}

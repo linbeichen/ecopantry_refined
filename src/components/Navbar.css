@@ -1,0 +1,114 @@
+/* src/components/Navbar.css */
+.navbar {
+    background-color: #8c6bae;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out; /* 导航栏的入场动画 */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px; /* 调整 logo 图片大小 */
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out; /* 鼠标悬浮时的缩放效果 */
+}
+
+.logo-img:hover {
+    transform: rotate(360deg); /* 鼠标悬浮时旋转效果 */
+}
+
+.navbar .logo .logo-text {
+    font-family: 'pacifico', cursive !important;
+    font-size: 24px !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 使链接和通知铃铛靠右 */
+}
+
+.nav-links ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out; /* 导航项的淡入动画 */
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white; /* 链接字体颜色为白色 */
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.nav-links ul li a.nav-link {
+    color: white;
+    text-decoration: none; /* 确保没有下划线 */
+}
+
+.nav-links ul li:hover a.nav-link {
+    color: #8c6bae; /* 悬浮时文字颜色变成与背景对比的颜色 */
+}
+
+.nav-links ul li a.nav-link:hover {
+    color: #8c6bae; /* 悬停时改变文字颜色 */
+    text-decoration: none; /* 确保悬停时没有下划线 */
+}
+
+.nav-links ul li:hover {
+    background-color: white;
+    transform: translateY(-3px); /* 悬浮时上移 */
+}
+
+.nav-links ul li.active {
+    background-color: white;
+    color: #9370DB;
+}
+
+.nav-links ul li.active a.nav-link {
+    color: #9370DB; /* 确保活动链接颜色已设置 */
+}
+
+.nav-links ul li.active:hover {
+    background-color: white;
+    color: #9370DB;
+}
+
+/* 导航栏入场动画 */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 导航项淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

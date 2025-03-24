@@ -1,0 +1,114 @@
+/* 主页面整体样式 */
+.analytics-page-container {
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f2f9; /* 背景颜色更改为紫色的浅色调 */
+  }
+  
+  /* 标题样式 */
+  .page-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* 日期选择部分 */
+  .date-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 居中对齐 */
+    margin-bottom: 30px;
+    gap: 30px; /* 增加元素之间的间距 */
+  }
+  
+  .date-picker-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 标签和输入框左对齐 */
+  }
+  
+  .date-picker-label {
+    font-size: 14px;
+    color: #000; /* 设置标签字体颜色为黑色 */
+    margin-bottom: 5px; /* 标签与输入框之间的间距 */
+  }
+  
+  .date-picker-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .date-picker-input {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 150px; /* 设置宽度 */
+    text-align: center; /* 居中对齐 */
+  }
+  
+  .date-picker-input:focus {
+    outline: none;
+    border: 1px solid #8c6bae; /* 焦点时边框颜色 */
+  }
+  
+  .calendar-icon {
+    position: absolute;
+    right: 10px;
+    color: #8c6bae; /* 图标颜色 */
+    pointer-events: none; /* 禁用图标的点击事件 */
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #8c6bae; /* 按钮背景色 */
+    color: white;
+    border: none;
+    border-radius: 20px; /* 圆角 */
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+  }
+  
+  .submit-button:hover {
+    background-color: #6c63ff; /* 鼠标悬浮时按钮颜色 */
+  }
+  
+  /* 内容容器的布局 */
+  .content-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* 左侧菜单和右侧图表区的布局占位样式 */
+  .menu-container {
+    width: 25%; /* 左侧菜单栏宽度 */
+  }
+  
+  .charts-container {
+    width: 70%; /* 右侧图表区宽度 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 添加响应式布局，确保在小屏幕上有良好的展示效果 */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column; /* 改为垂直布局 */
+    }
+    
+    .menu-container,
+    .charts-container {
+      width: 100%; /* 宽度为 100% */
+    }
+  }
+  

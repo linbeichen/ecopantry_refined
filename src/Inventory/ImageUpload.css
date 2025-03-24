@@ -1,0 +1,82 @@
+.upload-form {
+  display: flex; /* 使用flexbox布局 */
+  flex-direction: row; /* 将按钮排列在同一行 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  gap: 1rem; /* 按钮之间的间距 */
+  margin-top: 1rem;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px; /* 圆角按钮 */
+  background-color: #9370DB; /* 按钮颜色 */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 动画效果 */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.file-label:hover {
+  background-color: #805DBD; /* 鼠标悬停效果 */
+  transform: scale(1.05); /* 放大效果 */
+}
+
+.file-input {
+  display: none; /* 隐藏原生文件输入 */
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px; /* 圆角按钮 */
+  background-color: #9370DB; /* 按钮颜色 */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 动画效果 */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.submit-button:hover {
+  background-color: #805DBD; /* 鼠标悬停效果 */
+  transform: scale(1.05); /* 放大效果 */
+}
+
+.feedback-container {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #5a2d82; /* 文字颜色与主题搭配 */
+  text-align: center; /* 居中对齐 */
+  border: 1px solid #9370DB; /* 边框颜色 */
+  box-shadow: 0 0 5px rgba(147, 112, 219, 0.2); /* 添加轻微的阴影效果 */
+}
+
+.feedback-container.idle {
+  color: #5a2d82;
+  border-color: #9370DB;
+  background-color: #f8f4ff;
+}
+
+.feedback-container.uploading {
+  color: #0057b7;
+  border-color: #0057b7;
+  background-color: #e6f3ff;
+}
+
+.feedback-container.success {
+  color: #2e7d32;
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+}
+
+.feedback-container.error {
+  color: #d32f2f;
+  border-color: #f44336;
+  background-color: #ffebee;
+}

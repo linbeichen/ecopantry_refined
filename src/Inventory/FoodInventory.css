@@ -1,0 +1,188 @@
+/* 食品库存容器 */
+.food-inventory {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px; /* 设置容器的最大宽度 */
+    margin: 0 auto; /* 使容器居中 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* 使用现代字体 */
+}
+
+.title {
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 48px;
+    color: #805DBD;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.capture-button, .enter-button {
+    background-color: #805DBD;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.capture-button:hover, .enter-button:hover {
+    background-color: #805DBD;
+    transform: translateY(-2px);
+}
+
+.capture-button:active, .enter-button:active {
+    transform: translateY(0);
+}
+
+/* 主库存表格 */
+.inventory-table {
+    width: 100%;
+    max-width: 1000px; /* 设置表格的最大宽度 */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inventory-table th, .inventory-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.inventory-table th {
+    background-color: #805DBD;
+    color: white;
+    font-weight: bold;
+}
+
+.expired-cell {
+    background-color: #f5adad; /* 设置浅红色背景 */
+    color: white; /* 如果需要，可以设置文字颜色为白色，使其在红色背景上更易阅读 */
+}
+
+.inventory-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inventory-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.inventory-table input[type="number"],
+.inventory-table select,
+.inventory-table input[type="date"] {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+}
+
+.inventory-table input[type="number"]:focus,
+.inventory-table select:focus,
+.inventory-table input[type="date"]:focus {
+    border-color: #805DBD;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+.update-button, .delete-button {
+    background-color: #805DBD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.update-button:hover, .delete-button:hover {
+    background-color: #805DBD;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.label-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+/* 全局样式 */
+body {
+    background-color: #f5f7fa;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+td, th {
+    white-space: nowrap;
+}
+
+.inventory-table td:first-child {
+    text-align: left;
+}
+
+.inventory-table select {
+    height: 34px;
+}
+
+.inventory-table input[type="number"] {
+    width: 80px;
+}
+
+.inventory-table input[type="date"] {
+    padding: 4px 6px;
+}
+
+.update-button, .delete-button {
+    margin-left: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .inventory-table, .inventory-table thead, .inventory-table tbody, .inventory-table th, .inventory-table td, .inventory-table tr {
+        display: block;
+    }
+    .inventory-table tr {
+        margin-bottom: 15px;
+    }
+    .inventory-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .inventory-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    /* 定义过期物品的行样式 */
+    
+
+/* 其他样式保持不变 */
+
+}

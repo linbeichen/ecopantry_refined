@@ -1,0 +1,83 @@
+/* 左侧菜单整体样式 */
+.impact-menu {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 菜单标题样式 */
+.impact-menu h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 菜单描述文本样式 */
+.impact-menu p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 选项组样式 */
+.impact-options {
+  margin-top: 20px;
+}
+
+/* 选项卡样式 */
+.impact-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f4e8ff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 添加图片样式 */
+.option-icon {
+  width: 50px; /* 图片宽度 */
+  height: 50px; /* 图片高度 */
+  margin-left: 10px; /* 图片与文字的间距 */
+}
+
+/* 环形图标样式 */
+.impact-chart {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 添加响应式布局，适应小屏幕 */
+@media (max-width: 768px) {
+  .impact-menu {
+      padding: 20px;
+  }
+
+  .impact-option {
+      padding: 12px;
+  }
+
+  .option-text {
+      font-size: 14px;
+  }
+
+  .option-icon {
+      width: 24px;
+      height: 24px;
+  }
+}

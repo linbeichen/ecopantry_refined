@@ -1,0 +1,171 @@
+/* src/components/OnboardingGuide.css */
+
+/* Tooltip Styles (Adapted from OnboardingModal.css) */
+.joyride-tooltip {
+    background: linear-gradient(135deg, #8c6bae 0%, #ffffff 100%); /* Use same gradient background as modal */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Match modal's box shadow */
+    border-radius: 12px; /* Match modal's border radius */
+    color: #333; /* Text color similar to modal */
+    max-width: 500px;
+    padding: 20px; /* Padding to increase tooltip size */
+    animation: slideIn 0.5s ease-out, fadeIn 0.5s ease-out; /* Same animations as modal */
+    position: relative;
+    overflow: hidden;
+    z-index: 10002;
+  }
+  
+  /* Tooltip Header */
+  .joyride-tooltip h4 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff; /* Title color similar to modal */
+  }
+  
+  /* Tooltip Paragraph */
+  .joyride-tooltip p {
+    font-size: 1em;
+    color: #333; /* Text color similar to modal */
+  }
+  
+  /* Tooltip Buttons */
+  .joyride-tooltip__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .joyride-tooltip__button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff; /* Button background similar to modal */
+    color: #8c6bae; /* Button text color similar to modal */
+    border: 2px solid #8c6bae; /* Button border matches modal */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  }
+  
+  .joyride-tooltip__button:hover {
+    background-color: #8c6bae; /* Hover state matches modal */
+    color: #fff;
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 0 10px rgba(140, 107, 174, 0.5); /* Soft glow effect on hover */
+  }
+  
+  /* Tooltip Close Button */
+  .joyride-tooltip__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Close button color similar to modal */
+  }
+  
+  /* Overlay Styles */
+  .joyride-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for emphasis */
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide In Animation */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Gradient Background Animation */
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Bounce In Animation */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Pulsing Effect on Target Elements */
+  .joyride-beacon__outer {
+    background-color: rgba(140, 107, 174, 0.5); /* Color matches modal */
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 15px rgba(140, 107, 174, 0.7); /* Pulsing glow effect */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+    70% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  /* Animated Glow Effect on Target Elements */
+  .joyride-beacon__inner {
+    background-color: rgba(140, 107, 174, 1); /* Color matches modal */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .joyride-tooltip {
+      max-width: 90%; /* Adjust width for smaller screens */
+      padding: 15px;
+    }
+  
+    .joyride-tooltip__button {
+      font-size: 14px; /* Smaller font size for buttons */
+      padding: 8px 16px;
+    }
+  
+    .joyride-tooltip h4 {
+      font-size: 1.3em; /* Slightly smaller header */
+    }
+  
+    .joyride-tooltip p {
+      font-size: 0.9em; /* Slightly smaller paragraph */
+    }
+  }
+  

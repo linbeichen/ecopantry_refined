@@ -1,0 +1,90 @@
+.charts-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.chart-section {
+  margin: 10px 10px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.recharts-wrapper {
+  background-color: transparent !important;
+}
+
+.chart-section h3 {
+  text-align: center;
+  color: #4b4abf;
+  margin-bottom: 15px;
+}
+
+/* PieChart 样式 */
+.recharts-pie-label-line {
+  stroke: #ddd;
+}
+
+.recharts-tooltip-wrapper {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* 弹出窗口样式 */
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.popup-table {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  width: 300px;
+}
+
+.popup-table h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.popup-table button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.frequency-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.frequency-items-table th, .frequency-items-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.frequency-items-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.popup-table p {
+  text-align: center;
+  margin-top: 10px;
+}
