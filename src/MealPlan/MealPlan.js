@@ -2,26 +2,34 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // 导入 Link 组件
 import axios from 'axios';
 import RecipeGrid from './RecipeGrid';
+import  useStore  from '../store/store';
 import data from "./egg_tomato_onion.json";
 import './MealPlan.css';
 import MealPlanImage0 from '../images/MealPlanImage.png';
 
 function MealPlan(){
-    const [inventory, setInventory] = useState([]);
+    // const [inventory, setInventory] = useState([]);
+    const {inventory, loadInventoryFromStorage } = useStore();
     const [recipes, setRecipes] = useState([]);
     const [defaultRecipes, setDefaultRecipes] = useState([]);
     const [urgentList, setUrgents] = useState([]);
     const [isDefaultMenu, setIsDefaultMenu] = useState(true);
     const [isApiError, setIsApiError] = useState(false);
     
+    // 加载页面时加载库存数据
     useEffect(()=>{
+      /*
       const storedInventory = localStorage.getItem('inventory');
       if (storedInventory) {
         setInventory(JSON.parse(storedInventory));
       }
-      console.log("stored inventory:", storedInventory);
+      */
+      loadInventoryFromStorage();
+      // console.log("stored inventory:", inventory);
+    //},[]);
     },[]);
     
+    // 当库存inventory变化时，更新紧急物品列表 urgentList
     useEffect(()=>{
       console.log("inventory:", inventory);
       if (inventory.length > 0) {
@@ -48,6 +56,7 @@ function MealPlan(){
       }
     },[inventory]);
     
+    // 当紧急物品列表 urgentList 变化时，更新 recipes
     useEffect(() => {
       console.log('urgent items:', urgentList);
       const fetchRecipes = async () => {
